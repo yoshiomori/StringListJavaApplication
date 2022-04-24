@@ -9,14 +9,13 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private ListView citiesList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        citiesList = findViewById(R.id.citiesList);
+        ListView citiesList = findViewById(R.id.citiesList);
 
         ArrayList<String> cities = new ArrayList<>();
         cities.add("Zurich");
