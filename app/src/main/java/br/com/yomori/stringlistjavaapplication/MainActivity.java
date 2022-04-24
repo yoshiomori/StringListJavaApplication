@@ -3,8 +3,11 @@ package br.com.yomori.stringlistjavaapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -31,5 +34,13 @@ public class MainActivity extends AppCompatActivity {
         );
 
         citiesList.setAdapter(citiesAdapter);
+
+        citiesList.setOnItemClickListener(
+                (adapterView, view, i, l) -> Toast.makeText(
+                        MainActivity.this,
+                        cities.get(i) + " Selected",
+                        Toast.LENGTH_SHORT
+                ).show()
+        );
     }
 }
